@@ -1,0 +1,30 @@
+function dot-product (tab1,tab2:array_of_integer[], length:int)
+var
+i:integer;
+som:integer:=0;
+for i from 0 to length-1 do
+som:=som+tab1[i]*tab2[i]
+endfor;
+return(som);
+end.
+
+algorithme vectors 
+var tab1,tab2:array_of_integer[];
+som:integer;
+begin 
+repeat
+read(length1);
+read(length2);
+until (length1=length2) and (length1>1);
+
+for i from 0 to length1-1 do
+read(tab1[i]);
+read(tab2[i]);
+endfor;
+som:=dot_product(tab1,tab2,length1)
+if (som=0) then
+write ("vectors orthogonals");
+else 
+write("vectors no orthogonals");
+endif;
+end.
